@@ -1,0 +1,62 @@
+[
+  {
+    "name": "tomorrow deadline",
+    "message": "Submit the assignment tomorrow at 11:59 PM.",
+    "dateRule": "tomorrow",
+    "time": "23:59"
+  },
+  {
+    "name": "next Monday quiz",
+    "message": "Quiz next Monday at 3 PM.",
+    "dateRule": "nextMonday",
+    "time": "15:00"
+  },
+  {
+    "name": "Arabic explicit date and time",
+    "message": "يرجى تسليم تقرير المحاسبة يوم ١٥ أكتوبر ٢٠٢٦ الساعة ٣:٣٠ مساءً.",
+    "date": "2026-10-15",
+    "time": "15:30"
+  },
+  {
+    "name": "no clear date",
+    "message": "Please finish the report soon.",
+    "date": null,
+    "time": null
+  },
+  {
+    "name": "commas quotes and Arabic",
+    "message": "Submit \"التقرير, النهائي\" on 2026-10-16 at 11:59 PM. Include \"ملاحظات, إضافية\"; do not forget the attachments.",
+    "date": "2026-10-16",
+    "time": "23:59"
+  },
+  {
+    "name": "Sunday",
+    "message": "Prepare slides for Sunday at 9 AM.",
+    "dateRule": "Sunday",
+    "time": "09:00"
+  },
+  {
+    "name": "tonight without precise time",
+    "message": "Send the report tonight.",
+    "dateRule": "today",
+    "time": null
+  },
+  {
+    "name": "end of day",
+    "message": "Submit the timesheet by end of day.",
+    "dateRule": "today",
+    "time": "23:59"
+  },
+  {
+    "name": "time without date",
+    "message": "Submit the assignment at 11:59 PM.",
+    "date": null,
+    "time": "23:59"
+  },
+  {
+    "name": "ambiguous numeric date",
+    "message": "Submit the report on 03/04 at 3 PM.",
+    "date": null,
+    "time": "15:00"
+  }
+]
