@@ -80,7 +80,9 @@ export function taskStartUtc(date: string, time: string, timeZone: string): Date
   for (const hours of [-36, -24, -12, 0, 12, 24, 36]) {
     const sample = new Date(wallTime + hours * 3_600_000);
     const parts = localDateTimeParts(sample, timeZone);
-    const zoned = Date.parse(`${parts.date}T${parts.time}:${String(parts.seconds).padStart(2, "0")}Z`);
+    const [year, month, day] = parts.date.split("-").map(Number);
+    const [hour, minute] = parts.time.split(":").map(Number);
+    const zoned = Date.UTC(year, month - 1, day, hour, minute, parts.seconds);
     offsets.add(zoned - sample.getTime());
   }
   const matches = [...offsets].map((offset) => new Date(wallTime - offset)).filter((candidate) => {

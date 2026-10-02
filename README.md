@@ -14,7 +14,7 @@ A small web app that turns one university or work message into a calendar event.
 
 ## Stack
 
-Next.js App Router, React, TypeScript, and the Gemini REST API (`gemini-3.8-flash`). Tests use Node's test runner, tsx, and the independent ical.js parser.
+Next.js App Router, React, TypeScript, and the Gemini REST API (`gemini-3.5-flash-lite`). Tests use Node's test runner, tsx, and the independent ical.js parser.
 
 ## Run locally
 
@@ -77,4 +77,4 @@ Real extraction examples are in `tests/fixtures/messages.json`: tomorrow at 11:5
 
 ## Project status
 
-Complete implementation. Real Gemini extraction and the full extract/edit/download browser flow are pending verification with a valid project-local `GEMINI_API_KEY`. The unit tests, build, lint, typecheck, and mobile page/error/reset checks pass; no real extraction pass is claimed without credentials.
+Complete. Verified with 16 unit tests, real Gemini extraction for all 10 message fixtures, and five real browser flows covering extraction, editing every field, downloading independently parsed Arabic `.ics` files, and Start Over. Mobile (393 × 852, touch, DPR 3) and desktop layouts were checked. Build, lint, and typecheck pass. Calendar import was validated with an independent iCalendar parser; import into each individual calendar app is not automated.

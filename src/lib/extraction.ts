@@ -9,6 +9,7 @@ Do not invent a deadline, event, year, date, time, or duration. If there is no a
 If there are several distinct tasks or conflicting deadlines, do not select one arbitrarily: leave title empty and date/time null, and ask for one task in description.
 title: concise task name, maximum 400 characters. description: factual task details, maximum 10000 characters; no invented facts.
 date: YYYY-MM-DD Gregorian or null. time: 24-hour HH:mm or null. Missing/ambiguous fields MUST be null, never an arbitrary default.
+Resolve the date and time independently: an unclear date does NOT erase an explicitly clear time (e.g. ambiguous 03/04 at 3 PM => date=null, time="15:00"). An unclear time does not erase a clearly resolved date. Set only the uncertain field to null, except conflicting time zones or multiple distinct tasks as stated above.
 Current local date is ${context.date} (${context.weekday}), current time ${context.time}, in ${timeZone}.
 Interpret all times in this device time zone. Explicit conflicting other time zones require date/time null and clarification in description.
 Relative dates use the CURRENT date above, not a guessed message-sent date:

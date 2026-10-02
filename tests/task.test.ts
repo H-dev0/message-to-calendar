@@ -68,3 +68,8 @@ test("daylight-saving missing and repeated times require correction", () => {
   assert.throws(() => taskStartUtc("2026-03-08", "02:30", "America/New_York"), /daylight-saving/);
   assert.throws(() => taskStartUtc("2026-11-01", "01:30", "America/New_York"), /daylight-saving/);
 });
+
+test("valid upper-bound dates survive timezone samples crossing year 10000", () => {
+  assert.equal(taskStartUtc("9999-12-30", "15:00", "UTC").toISOString(), "9999-12-30T15:00:00.000Z");
+  assert.equal(taskStartUtc("9999-12-31", "12:00", "Asia/Riyadh").toISOString(), "9999-12-31T09:00:00.000Z");
+});
